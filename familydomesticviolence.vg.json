@@ -27,6 +27,7 @@
         "name": "Year: "
       }
     }
+
   ],
   "transform": [
     {
@@ -34,19 +35,19 @@
     },
     {
       "aggregate": [{"op": "sum", "field": "Number of Offense", "as": "Total Offenses"}],
-      "groupby": ["State/Territory", "Year"]
+      "groupby": ["State", "Year"]
     }
   ],
   "mark": {"type": "arc", "innerRadius": 35, "outerRadius": 200},
   "encoding": {
     "theta": {"field": "Total Offenses", "type": "quantitative"},
     "color": {
-      "field": "State/Territory", 
+      "field": "State", 
       "type": "nominal",
-      "legend": {"title": "State/Territory"}
+      "legend": {"title": "State"}
     },
     "tooltip": [
-      {"field": "State/Territory", "type": "nominal"},
+      {"field": "State", "type": "nominal"},
       {"field": "Year", "type": "ordinal"},
       {"field": "Total Offenses", "type": "quantitative", "format": ","}
     ]
