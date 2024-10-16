@@ -32,15 +32,15 @@
   "transform": [
     {
       "filter": "year(datum.Year) == selectedYear"
-    },
-    {
-      "aggregate": [{"op": "sum", "field": "Number of Offense", "as": "Total Offenses"}],
-      "groupby": ["State", "Year"]
     }
   ],
   "mark": {"type": "arc", "innerRadius": 35, "outerRadius": 200},
   "encoding": {
-    "theta": {"field": "Total Offenses", "type": "quantitative"},
+    "theta": {
+      "aggregate": "sum",
+      "field": "Number of Offense",
+       "type": "quantitative",
+      "stack" : true},
     "color": {
       "field": "State", 
       "type": "nominal",
@@ -49,7 +49,10 @@
     "tooltip": [
       {"field": "State", "type": "nominal"},
       {"field": "Year", "type": "ordinal"},
-      {"field": "Total Offenses", "type": "quantitative", "format": ","}
+      {"aggregate": "sum", 
+      "field": "Number of Offense", 
+      "type": "quantitative", 
+      "format": ","}
     ]
   },
   "view": {
