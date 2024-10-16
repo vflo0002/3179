@@ -1,0 +1,34 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/vflo0002/3179/refs/heads/main/data/sexualassaultbyage.csv"
+    },
+    "mark": "rect",
+    "encoding": {
+      "x": {
+        "field": "State",
+        "type": "nominal",
+        "axis": {"title": "State"}
+      },
+      "y": {
+        "field": "Age",
+        "type": "nominal",
+        "axis": {"title": "Age Group"}
+      },
+      "color": {
+        "field": "Number",
+        "type": "quantitative",
+        "scale": {
+          "scheme": "redblue"
+        },
+        "legend": {
+          "title": "Number of Victims"
+        }
+      },
+      "tooltip": [
+        {"field": "State", "type": "nominal"},
+        {"field": "Age", "type": "nominal"},
+        {"field": "Number", "type": "quantitative"}
+      ]
+    }
+  }
