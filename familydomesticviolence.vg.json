@@ -1,60 +1,55 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Interactive Polar Chart of Family and Domestic Violence-related Offenses by Sex, Selectable by Year and State",
   "data": {
-    "url": "familydomesticviolence.csv"
+    "url": "https://raw.githubusercontent.com/vflo0002/3179/refs/heads/main/data/familydomesticviolence.csv"
   },
-  "transform": [
-    {
-      "filter": {"selection": "selectYear"}
-    },
-    {
-      "filter": {"selection": "selectState"}
-    }
-  ],
+  "title": {
+    "text": "Family and Domestic Violence Incidents",
+    "subtitle": "Interactive Analysis by Year and State",
+    "fontSize": 20,
+    "color": "dodgerblue"
+  },
+  "width": 500,
+  "height": 500,
+  "config": {
+    "view": {"stroke": "transparent"},
+    "arc": {"fill": "steelblue", "stroke": "white"}
+  },
   "params": [
     {
-      "name": "selectYear",
+      "name": "selectedYear",
+      "value": 2014,
       "bind": {
-        "input": "select",
-        "options": [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023],
-        "labels": ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023"],
+        "input": "range",
+        "min": 2014,
+        "max": 2023,
+        "step": 1,
         "name": "Year: "
-      }
-    },
-    {
-      "name": "selectState",
-      "bind": {
-        "input": "select",
-        "options": ["New South Wales", "Victoria", "Queensland", "South Australia", "Western Australia", "Tasmania", "Northern Territory", "Australian Capital Territory"],
-        "name": "State: "
       }
     }
   ],
-  "mark": {
-    "type": "arc",
-    "tooltip": true
-  },
-  "encoding": {
-    "theta": {
-      "field": "Number of Offense",
-      "type": "quantitative",
-      "stack": true
+  "transform": [
+    {
+      "filter": "year(datum.Year) == selectedYear"
     },
-    "color": {
-      "field": "Sex",
-      "type": "nominal",
-      "legend": {
-        "title": "Sex"
-      },
-      "scale": {
-        "domain": ["Males", "Females"],
-        "range": ["#1f77b4", "#e377c2"]
-      }
-    },
-    "opacity": {
-      "value": 0.9
+    {
+      "aggregate": [{"op": "sum", "field": "Number of Offense", "as": "Total Offenses"}],
+      "groupby": ["State/Territory", "Year"]
     }
+  ],
+  "mark": {"type": "arc", "innerRadius": 35, "outerRadius": 200},
+  "encoding": {
+    "theta": {"field": "Total Offenses", "type": "quantitative"},
+    "color": {
+      "field": "State/Territory", 
+      "type": "nominal",
+      "legend": {"title": "State/Territory"}
+    },
+    "tooltip": [
+      {"field": "State/Territory", "type": "nominal"},
+      {"field": "Year", "type": "ordinal"},
+      {"field": "Total Offenses", "type": "quantitative", "format": ","}
+    ]
   },
   "view": {
     "stroke": null
