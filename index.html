@@ -1,16 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>My First HTML Document</title>
-</head>
-<body>
-    <h1>1. Introduction to HTML. (Level 1)</h1>
-    <h2>1.1 Creating Paragraphs. (Level 2)</h2>
-    <p>Unit: FIT3179 Data Visualisation</p>
-    <p>This is a paragraph about paragraphs.</p>
+<html>
 
-    <h2>1.2 Creating Tables (Level 2).</h2>
-    <h3>1.2.1 Table Rows (Level 3).</h3>
-    <p>This is a third paragraph about table columns.</p>
+<head>
+    <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <script src="js/main.js"></script>
+    <link rel="icon" type="image/x-icon" href="css/1000_F_278699366_G3tjBdDUM1jdkr43w5ORMC783rqX5YEB.jpg">
+    <title>World Happiness Report</title>
+</head>
+<!-- CSS file -->
+<link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest&family=Playfair+Display&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="page">
+
+        <div class="header">
+            <h1>Crimes in Australia Through the Years (States)</h1>
+            <p style="color: white;">Join us on a joyful journey through world happiness! Most of our visualizations will focus on the transformative year 
+                of 2016 when the World Happiness Report underwent significant changes. </p>
+        </div>
+    
+        <div class="container-normal">
+            <div class="description description-right">
+                <h2 align="center">A Country of Crimes Mapped</h2>
+                <p align="center" style="text-align: justify;">Start your exploration by delving into a vivid chloropleth map, showcasing global happiness scores. 
+                    The map unveils fascinating findings, including the regions where happiness reigns supreme. 
+                    North and South America, Australia, and Europe are among the bright spots, while the map also 
+                    sheds light on the challenges faced by Africa and other continents.</p>
+        
+            </div>
+            <div id=states></div>
+
+        </div>
+
+        <div class="container-normal">
+            <div class="description description-right">
+                <h2 align="center">The Influence of Prosperity on Joy and Life Expectency</h2>
+                <p align="center" style="text-align: justify;">Our adventure continues by examining the close relationship between a country's economic prosperity, 
+                    measured by GDP per capita, and the happiness and life expectency of its citizens. Discover how higher GDP often leads to increased happiness 
+                    and life expectency, painting a vivid picture of the importance of economic well-being in the pursuit of contentment.
+                </p>
+        
+            </div>
+            <div id=SAgenderinteractive></div>
+
+        </div>
+
+        <div class="container-normal">
+            <div class="description description-right">
+                <h2 align="center">The Fabulous Five vs. The Frowning Five</h2>
+                <p align="center" style="text-align: justify;">Explore a unique comparison between the world's top five happiest nations and the bottom five in the happiness 
+                    ranks. We're pitting measures like freedom, generosity, corruption perceptions, and social support against each other in an extraordinary face-off. 
+                    Discover what sets the cheeriest countries apart from the least happy ones in this captivating showdown!
+
+                    In 2016, <span class="countries_good">Denmark, Finland, Iceland, Norway </span> and <span class="countries_good">Switzerland </span> were the happiest and <span class="countries_bad">Burundi, Syria, Togo, Afghanistan </span>and <span class="countries_bad">Benin </span> were the least happy countries.
+                </p>
+        
+            </div>
+            <div id=world_happiness_index-3></div>
+
+        </div>
+        <div class=" container-normal">
+            <div class="description description-right">
+                <h2 align="center">Regions Unveiled: Unmasking Happiness Residues</h2>
+                <p align="center" style="text-align: justify;">
+                    Delve into the fascinating world of regional disparities with the Dystopia Residual Matrix. Uncover the hidden factors that contribute to each region's 
+                    unique happiness landscape. But what's the Dystopia Residual, you ask? It's a whimsical measure that helps us understand how far each region's 
+                    happiness level deviates from the hypothetical 'dystopia,' adding an intriguing layer to the story of global well-being.
+                </p>
+            </div>
+            <div id=world_happiness_index-4 align="center"></div>
+            <p  align="center" style="text-align: justify;">
+                This whimsical metric measures how far a region's happiness level stands from a make-believe state of ultimate unhappiness, known as 'dystopia.' It's like 
+                gauging the gap between a place's real joy and the absolute pits of despair. The bigger the gap, the happier the region is, making it a unique and playful 
+                way to understand regional happiness. So, when you see a high Dystopia Residual, it means that region is a long way from the land of gloom, and happiness reigns 
+                supreme!
+            </p>
+
+        </div>
+
+        <div class="container-normal">
+            <div class="description description-right">
+                <h2 align="center">Joyful Journeys and Wandering Smiles</h2>
+                <p align="center" style="text-align: justify;"> In our parting glimpse, we observe the fascinating journeys of six nations on the happiness spectrum. <span class="countries_good">Bulgaria, Gabon, Philippines, </span>
+                    and <span class="countries_good">Ivory Coast </span> ascend towards greater joy with each passing year, painting smiles on their faces. Meanwhile, the <span class="countries_bad">Venezuela, </span>and 
+                    <span class="countries_bad">Yemen </span> navigate through challenges, with happiness levels shifting like tides. It's a tale of joy's ebb and flow, a prelude to the future chapters in each country's 
+                    happiness story.
+                </p>
+        
+            </div>
+            <div id=world_happiness_index-5></div>
+        </div>
+
+        <div class="footer">
+            <h2>Cherishing the Joyful Palette</h2>
+            <p style="color: white;">Our happiness odyssey ends with a vivid mosaic of global well-being. Each nation's unique story, from prosperity's influence to regional disparities, 
+                adds depth to our understanding. Happiness, a dynamic journey, paints the world with vibrant hues. As we conclude, may your life be a canvas filled with the colors of joy! </p>
+        </div>
+    </div>
+
 </body>
+
+</html>
+
 </html>

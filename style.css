@@ -1,0 +1,169 @@
+#states {
+    top: -8px;
+    bottom: 100px;
+    height: 400px;
+    width: 500px;
+    margin-left: 20px;
+    margin-bottom: 150px;
+  }
+  
+  #agestate {
+    top: -8px;
+    bottom: 100px;
+    height: 400px;
+    width: 500px;
+    margin-left: 20px;
+    margin-bottom: 150px;
+  }
+  
+  #familydomesticviolence {
+    top: -8px;
+    bottom: 100px;
+    height: 400px;
+    width: 500px;
+    margin-left: 20px;
+    margin-bottom: 150px;
+  }
+  
+  #gender {
+    top: -8px;
+    bottom: 100px;
+    height: 400px;
+    width: 500px;
+    margin-left: 20px;
+    margin-bottom: 150px;
+  }
+  
+  #offencebyyear {
+    top: 27px;
+    bottom: -300px;
+    height: 500px;
+    width: 500px;
+  }
+  
+  body {
+    font-family: 'Arial';
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .header {
+    background-color: #B87333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .footer {
+    background-color: #B87333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .page {
+    position: relative;
+    width: 850px;
+    margin: auto;
+    padding: 50px;
+    padding-top: 35px;
+  }
+  
+  .page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('Yellow and White Illustrative Smile Emoji Phone Wallpaper.png');
+    opacity: 0.6;
+    z-index: -1;
+  }
+  
+  .container-normal {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .vega-bind {
+    margin-bottom: 20px;
+    margin-top: 5px;
+    width: 75%;
+    font-family: Arial;
+  }
+  
+  .countries_bad {
+    color: #e61414;
+    font-weight: bold;
+  }
+  
+  .countries_good {
+    color: #15cf53;
+    font-weight: bold;
+  }
+  
+  .shaded {
+    color: #fdcc8a;
+  }
+  
+  .container-images {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #b873333a;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+  
+  select {
+    appearance: none;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    font-family: Arial;
+    font-size: 16px;
+    color: #333;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  select:focus {
+    outline: none;
+    border-color: #007BFF;
+  }
+  
+  select:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+  }
+  
+  select option {
+    font-family: inherit;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding: 5px;
+    pointer-events: none;
+    color: #555;
+  }
+  
