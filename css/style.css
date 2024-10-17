@@ -25,6 +25,15 @@
     margin-bottom: 150px;
   }
   
+  #SAgenderinteractive {
+    top: -8px;
+    bottom: 100px;
+    height: 400px;
+    width: 500px;
+    margin-left: 20px;
+    margin-bottom: 150px;
+  }
+  
   #gender {
     top: -8px;
     bottom: 100px;
@@ -80,7 +89,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url('Yellow and White Illustrative Smile Emoji Phone Wallpaper.png');
+    background-image: url('pngtree-background-crime-scene-caution-tape-png-image_6251590.png');
     opacity: 0.6;
     z-index: -1;
   }

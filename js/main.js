@@ -1,32 +1,35 @@
-var specVis1 = "./js/world_happiness_index-1.vg.json";
-var specVis2 = "./js/world_happiness_index-2.vg.json";
-var specVis3 = "./js/world_happiness_index-3.vg.json";
-var specVis4 = "./js/world_happiness_index-4.vg.json";
-var specVis5 = "./js/world_happiness_index-5.vg.json";
+var specVis1 = "./js/states.vg.json";
+var specVis2 = "./js/agestate.vg.json";
+var specVis3 = "./js/gender.vg.json";
+var specVis4 = "./js/familydomesticviolence.vg.json";
+var specVis5 = "./js/SAgenderinteractive.vg.json";
+var specVis6 = "./js/offencebyyear.vg.json";
 
 
-vegaEmbed('#world_happiness_index-1', specVis1, {
+vegaEmbed('#states', specVis1, {
     "actions": false
 });
 
-vegaEmbed('#world_happiness_index-2', specVis2, {
+vegaEmbed('#agestate', specVis2, {
     "actions": false
 }).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
-//vegaEmbed('#world_happiness_index-3', specVis3, { "actions": false });
-
-vegaEmbed('#world_happiness_index-3', specVis3, {
+vegaEmbed('#gender', specVis3, {
     "actions": false
 }).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
-vegaEmbed('#world_happiness_index-4', specVis4, { "actions": false }).then(function(result) {
+vegaEmbed('#familydomesticviolence', specVis4, { "actions": false }).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
 
-vegaEmbed('#world_happiness_index-5', specVis5, { "actions": false }).then(function(result) {
+vegaEmbed('#SAgenderinteractive', specVis5, { "actions": false }).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);
+
+vegaEmbed('#offencebyyear', specVis6, { "actions": false }).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
