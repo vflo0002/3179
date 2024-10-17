@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+
+   <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" 
+  integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS Stylesheet--> 
+  <link rel="stylesheet" href="css/style2.css">
+
+  <!-- GoogleFont--> 
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Libre+Baskerville&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="page">
+        <h1>Crimes in Australia Through the Years (States)</h1>
+   
+    
+    <div class="container-normal">
+        <div>
+            <p>
+                Dive into a comprehensive exploration of crime statistics across Australia, featuring interactive maps, trend analyses, and demographic breakdowns. Uncover patterns and insights into various types of crimes from domestic violence to sexual assaults over the last decade.
+            </p>
+        </div>
+        <div>
+            <img src="css/Image1.jpg" alt="Image 1">
+        </div>
+    </div>
+
+
+    <div class="container2-normal">
+        <div>
+            <h2>
+                Correlation between Age and States?
+            </h2>
+            <p>
+                Utilising our interactive choropleth map, examine the spatial distribution of crime throughout the Australian states between 2014 and 2023.
+                 One may quickly compare the visual intensity of crime by region using this visualisation,
+                  which shows the number of crimes per 10,000 people. A range of 100 to over 2000 crimes per 10,000 persons indicates that the deeper the blue, the higher the crime rate. To view the evolution of crime rates over the course of a decade, use the slider beneath the map to select a particular year. With the ability to identify places where crime rates have changed significantly over time and to understand regional security trends, this tool is a valuable resource.
+            </p>
+        </div>
+        <div id=states></div>
+    </div>
+
+    <div class="container3-normal">
+        <h2>TITLE</h2>
+        <div class="flex-container">
+            <div id="doughnutchart" class="flex-item">
+                <!-- Doughnut chart goes here -->
+            </div>
+            <div class="flex-item">
+                <p>HELLOO</p>
+            </div>
+            <div id="gender" class="flex-item">
+                <!-- Gender chart goes here -->
+            </div>
+        </div>
+    </div>
+
+    <div class="container2-normal">
+        <div>
+            <h2>
+                TITLE
+            </h2>
+            <p>
+                TEXT TEXT            </p>
+        </div>
+        <div id=heatmap></div>
+    </div>
+
+    <div class="container3-normal">
+        <h2>TITLE</h2>
+        <div class="flex-container">
+            <div id="offencebyyear" class="flex-item">
+                <!-- Doughnut chart goes here -->
+            </div>
+            <div class="flex-item">
+                <p>HELLOO</p>
+            </div>
+            <div id="SAgenderinteractive" class="flex-item">
+                <!-- Gender chart goes here -->
+            </div>
+        </div>
+    </div>
+
+
+    <div class="credit-container">
+        <p>Created by <b>Yeyeyeyeye</b> <br>
+        </p>
+    </div> 
+
+</div>
+
+<script type="text/javascript">
+    var specVis1 = "./js/states.vg.json";
+    var donutchart = "./js/familydomesticviolence.vg.json";
+    var specVis2 = "./js/agestate.vg.json";
+    var specVis3 = "./js/gender.vg.json";
+    var specVis4 = "./js/offencebyyear.vg.json";
+    var specVis5 = "./js/SAgenderinteractive.vg.json";
+
+
+    vegaEmbed('#states', specVis1, {
+        "actions": false
+    });
+
+    vegaEmbed('#doughnutchart', donutchart, {
+        "actions": false
+    }).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#gender', specVis3, {
+        "actions": false
+    }).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#heatmap', specVis2, { "actions": false }).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaEmbed('#offencebyyear', specVis4, { "actions": false }).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error)
+
+    vegaEmbed('#SAgenderinteractive', specVis5, { "actions": false }).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+</script>
+</body>
+</html>

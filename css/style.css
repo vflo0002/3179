@@ -1,3 +1,17 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 950px; /* Adjust to your desired width */
+  background-color: #dbd2c3;
+  padding: 50px;
+  padding-top: 35px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
 #states {
     top: -8px;
     bottom: 100px;
@@ -175,4 +189,5 @@
     pointer-events: none;
     color: #555;
   }
+  
   
