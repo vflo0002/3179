@@ -1,0 +1,40 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 450,
+    "height": 450,
+    "title": "Number of Crimes Happening in Australia By Year (State)",
+    "projection": {"type": "equalEarth", "rotate": [-132, 0, 0]},
+    "data": {
+      "url": "https://raw.githubusercontent.com/vflo0002/3179/refs/heads/main/australiastates.json",
+      "format": {
+        "type": "topojson", "feature": "australiamap"
+      }
+    },
+    "transform": [
+      {
+        "lookup": "properties.name",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/vflo0002/3179/refs/heads/main/choropleth.csv"
+          },
+          "key": "State",
+          "fields": ["Number"]
+        }
+      },
+      {
+        "calculate": "datum.Number + 0.1", "as": "Number of crimes"
+      }
+    ],
+    "mark": {"type": "geoshape"},
+    "encoding": {
+      "color": {
+        "field": "Number",
+        "type": "quantitative",
+        "scale": {"type": "log"}
+      },
+      "tooltip": [
+        {"field": "properties.name", "type": "nominal", "title": "State"},
+        {"field": "Number", "type": "quantitative"}
+      ]
+    }
+  }
