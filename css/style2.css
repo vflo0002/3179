@@ -90,6 +90,7 @@ h1 {
 .flex-item {
     flex: 1; /* Allows each child to grow and take up equal space */
     margin: 0 10px; /* Adds margin between flex items, adjust as needed */
+    min-width: 0;
     padding: 10px; /* Optional: Adds padding within each flex item */
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds subtle shadow for depth */
 }

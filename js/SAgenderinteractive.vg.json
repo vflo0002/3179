@@ -1,6 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Sexual Assault Over the Years (Gender)",
+    "title": "Sexual Assault (Gender)",
+    "width": 120,
+    "height": 280,
     "data": {
         "url": "https://raw.githubusercontent.com/vflo0002/3179/refs/heads/main/data/sexual_assault_by_gender.csv"
     },

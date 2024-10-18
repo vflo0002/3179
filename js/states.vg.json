@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 350,
+  "width": 550,
   "height": 350,
   "title": "Number of Crimes Happening in Australia By Year (State)",
   "params": [

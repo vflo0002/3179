@@ -4,13 +4,12 @@
       "url": "https://raw.githubusercontent.com/vflo0002/3179/refs/heads/main/data/familydomesticviolence.csv"
     },
     "title": {
-      "text": "Comparison of Domestic Violence Incidents by Gender",
-      "subtitle": "Interactive Analysis by Year and State",
+      "text": "By Gender",
       "fontSize": 18,
       "color": "dodgerblue"
     },
-    "width": 300,
-    "height": 300,
+    "width": 80,
+    "height": 210,
     "config": {
       "view": {"stroke": "transparent"}
     },
@@ -28,6 +27,7 @@
       },
       {
         "name": "State_selection",
+        "value": "New South Wales",
         "bind": {
           "input": "select",
           "options": ["New South Wales", "Victoria", "Queensland", "South Australia", "Western Australia", "Tasmania", "Northern Territory", "Australian Capital Territory"],
