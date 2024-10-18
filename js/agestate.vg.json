@@ -10,12 +10,12 @@
       "x": {
         "field": "State",
         "type": "nominal",
-        "axis": {"title": "State"}
+        "axis": {"title": "State", "labelFont": "Barlow", "titleFont": "Barlow"}
       },
       "y": {
         "field": "Age",
         "type": "nominal",
-        "axis": {"title": "Age Group"}
+        "axis": {"title": "Age Group", "labelFont": "Barlow", "titleFont": "Barlow"}
       },
       "color": {
         "field": "Number",
@@ -24,7 +24,9 @@
           "scheme": "blueorange"
         },
         "legend": {
-          "title": "Number of Victims"
+          "title": "Number of Victims",
+          "labelFont": "Barlow", 
+          "titleFont": "Barlow"
         }
       },
       "tooltip": [

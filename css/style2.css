@@ -21,7 +21,7 @@ body {
     align-items: center;
     position: relative;
     width: 800px; /* Adjust to your desired width */
-    background-color: #dbd2c3;
+    background-color: #e7f7f4;
     padding: 50px;
     padding-top: 35px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -130,7 +130,7 @@ h1 {
 }
 
 .credit-container {
-    background-color: #F4F4F4;
+    background-color: #FFF;
     padding-left: 5px;
     padding-right: 5px;
     padding-top: 5px;

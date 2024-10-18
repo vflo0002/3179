@@ -1,6 +1,10 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Offences over the Years",
+    "title": {
+      "text": "Offences over the Years",
+      "font": "Barlow",
+      "fontSize": 17
+    },
     "width": 130,
     "height": 130,
     "data": {
@@ -28,25 +32,27 @@
       "x": {
         "field": "Year",
         "type": "ordinal",
-        "axis": {"title": "Year"}
+        "axis": {"title": "Year", "labelFont": "Barlow", "titleFont": "Barlow"}
       },
       "y": {
         "field": "Number",
         "type": "quantitative",
-        "axis": {"title": "Number of Offences"}
+        "axis": {"title": "Number of Offences", "labelFont": "Barlow", "titleFont": "Barlow"}
       },
       "color": {
         "field": "Offence",
         "type": "nominal",
         "scale": {
           "domain": ["Homicide and related offences", "Sexual assault", "Kidnapping/abduction", "Blackmail/extortion", "Unlawful entry with intent"],
-          "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd"]
+          "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#FDDFAC", "#9467bd"]
         },
         "legend": {
           "title": "Type of Offence",
           "orient": "bottom",
           "columns": 1,
-          "labelFontSize": 8
+          "labelFontSize": 8,
+          "labelFont": "Barlow",
+          "titleFont": "Barlow"
         }
       },
       "tooltip": [

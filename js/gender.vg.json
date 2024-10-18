@@ -6,12 +6,16 @@
     "title": {
       "text": "By Gender",
       "fontSize": 18,
-      "color": "black"
+      "color": "black",
+      "font": "Barlow"
     },
     "width": 80,
     "height": 320,
     "config": {
-      "view": {"stroke": "transparent"}
+      "view": {"stroke": "transparent"},
+      "text": {"font": "Barlow"},
+      "legend": {"labelFont": "Barlow", "titleFont": "Barlow"},
+      "axis": {"labelFont": "Barlow", "titleFont": "Barlow"}
     },
     "params": [
       {
@@ -60,7 +64,7 @@
         "type": "nominal",
         "scale": {
           "domain": ["Males", "Females"],
-          "range": ["#1f77b4", "#e377c2"]
+          "range": ["#1f77b4", "#9E42FF"]
         }
       },
       "tooltip": [
