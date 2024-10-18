@@ -6,10 +6,10 @@
   "title": {
     "text": "By State",
     "fontSize": 18,
-    "color": "dodgerblue"
+    "color": "black"
   },
   "width": 100,
-  "height": 210,
+  "height": 340,
   "config": {
     "view": {"stroke": "transparent"},
     "arc": {"fill": "steelblue"}
@@ -32,7 +32,7 @@
       "filter": "year(datum.Year) == selectedYear"
     }
   ],
-  "mark": {"type": "arc", "innerRadius": 10, "outerRadius": 80},
+  "mark": {"type": "arc", "innerRadius": 20, "outerRadius": 85},
   "encoding": {
     "theta": {
       "aggregate": "sum",

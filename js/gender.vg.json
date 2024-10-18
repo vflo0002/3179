@@ -6,10 +6,10 @@
     "title": {
       "text": "By Gender",
       "fontSize": 18,
-      "color": "dodgerblue"
+      "color": "black"
     },
     "width": 80,
-    "height": 210,
+    "height": 320,
     "config": {
       "view": {"stroke": "transparent"}
     },
