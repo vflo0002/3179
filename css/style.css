@@ -1,10 +1,27 @@
+/* General body styling */
+body * {
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f5f5f5;
+}
+
+/* Specific container for page content */
 .page {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 950px; /* Adjust to your desired width */
-  background-color: #dbd2c3;
+  width: 800px; /* Adjust to your desired width */
+  background-color: #e7f7f4;
   padding: 50px;
   padding-top: 35px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -12,182 +29,120 @@
   margin-top: 20px;
 }
 
-#states {
-    top: -8px;
-    bottom: 100px;
-    height: 400px;
-    width: 500px;
-    margin-left: 20px;
-    margin-bottom: 150px;
-  }
-  
-  #agestate {
-    top: -8px;
-    bottom: 100px;
-    height: 400px;
-    width: 500px;
-    margin-left: 20px;
-    margin-bottom: 150px;
-  }
-  
-  #familydomesticviolence {
-    top: -8px;
-    bottom: 100px;
-    height: 400px;
-    width: 500px;
-    margin-left: 20px;
-    margin-bottom: 150px;
-  }
-  
-  #SAgenderinteractive {
-    top: -8px;
-    bottom: 100px;
-    height: 400px;
-    width: 500px;
-    margin-left: 20px;
-    margin-bottom: 150px;
-  }
-  
-  #gender {
-    top: -8px;
-    bottom: 100px;
-    height: 400px;
-    width: 500px;
-    margin-left: 20px;
-    margin-bottom: 150px;
-  }
-  
-  #offencebyyear {
-    top: 27px;
-    bottom: -300px;
-    height: 500px;
-    width: 500px;
-  }
-  
-  body {
-    font-family: 'Arial';
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .header {
-    background-color: #B87333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .footer {
-    background-color: #B87333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-  }
-  
-  .page {
-    position: relative;
-    width: 850px;
-    margin: auto;
-    padding: 50px;
-    padding-top: 35px;
-  }
-  
-  .page::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: url('pngtree-background-crime-scene-caution-tape-png-image_6251590.png');
-    opacity: 0.6;
-    z-index: -1;
-  }
-  
-  .container-normal {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    margin-top: 20px;
-  }
-  
-  .vega-bind {
-    margin-bottom: 20px;
-    margin-top: 5px;
-    width: 75%;
-    font-family: Arial;
-  }
-  
-  .countries_bad {
-    color: #e61414;
-    font-weight: bold;
-  }
-  
-  .countries_good {
-    color: #15cf53;
-    font-weight: bold;
-  }
-  
-  .shaded {
-    color: #fdcc8a;
-  }
-  
-  .container-images {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #b873333a;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-  }
-  
-  select {
-    appearance: none;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    font-family: Arial;
-    font-size: 16px;
-    color: #333;
-    border-radius: 5px;
-    width: 100%;
-  }
-  
-  select:focus {
-    outline: none;
-    border-color: #007BFF;
-  }
-  
-  select:hover {
-    background-color: #e0e0e0;
-    cursor: pointer;
-  }
-  
-  select option {
-    font-family: inherit;
-    font-size: 16px;
-    color: #333;
-  }
-  
-  select::after {
-    content: '\25BC';
-    position: absolute;
-    top: 0;
-    right: 10px;
-    padding: 5px;
-    pointer-events: none;
-    color: #555;
-  }
-  
-  
+h1 {
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 900;
+}
+
+/* Styling for containers with normal content */
+.container-normal {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Additional styles for the description and image within the container */
+.container-normal div {
+  flex: 1; /* Each child will take equal width */
+  padding: 10px; /* Spacing between text and image */
+}
+
+/* .container-normal p {
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+} */
+
+.container-normal img {
+  width: 100%; /* Full width of its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.container2-normal {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center-align items horizontally */
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.container2-normal h2 {
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+}
+
+/* .container2-normal p {
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+} */
+
+.container3-normal {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.container3-normal h2 {
+  text-align: center;
+  margin-bottom: 20px;  /* Adds space below the title */
+  font-family: "Barlow", sans-serif;
+}
+
+/* .container3-normal p {
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+} */
+
+.flex-container {
+  display: flex; /* This establishes the flex context for children */
+  justify-content: space-between; /* Distributes space between children */
+}
+
+.flex-item {
+  flex: 1; /* Allows each child to grow and take up equal space */
+  margin: 0 10px; /* Adds margin between flex items, adjust as needed */
+  min-width: 0;
+  padding: 10px; /* Optional: Adds padding within each flex item */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds subtle shadow for depth */
+}
+
+.desc-head {
+  background-color: #CCE0AC;
+  text-align: center;
+  width: auto; /* Adjust to take appropriate space */
+  padding: 10px; /* Uniform padding */
+  border-radius: 5px;
+}
+
+.credit-container {
+  background-color: #FFF;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  text-align: center;
+  font-family: 'Afacad Flux', sans-serif;
+  font-size: 14px;
+  color: #333;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 20px;
+}
+
+.credit-container p {
+  text-align: center;
+  font-family: "Barlow", sans-serif;
+}
